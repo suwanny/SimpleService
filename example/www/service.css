@@ -1,0 +1,14 @@
+#version {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #fff; 
+    color: #aaa; 
+}
+
+body { 
+    background-color: #111; 
+    color: #aaa; 
+    text-align:center; /* for IE */
+    margin:0 auto; /* for the rest */
+    padding: 10px;
+}

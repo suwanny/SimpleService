@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Simple Service</title>
+    <link href="/service.css" media="screen" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" src="/js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+        $.ajax({
+          url: "/version",
+          success: function(resp) {
+            console.log("get version.");
+            console.dir(resp);
+            $("#version").html("Version=" + resp.version);
+            $("#name").html("Name=" + resp.name);
+          }
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <H1>Simple Service</H1>
+    <p>This is a test.</p>
+    <p>Here is your <a href="/version">"/version"</a> interface.</p>
+    <div id="version"></div>
+    <div id="name"></div>
+  </body>
+</html>
